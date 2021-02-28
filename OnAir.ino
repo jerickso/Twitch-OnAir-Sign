@@ -72,6 +72,7 @@ void get_bearer() {
 }
 
 void setup() {
+  WiFi.mode(WIFI_STA);    // Ensure wireless mode is set to station/client
   client.setInsecure();   // We do not need to validate the SSL certificate thumbprints
   strip.begin();
   strip.show();           // Initialize all pixels to off
